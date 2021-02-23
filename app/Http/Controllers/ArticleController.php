@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\DischiController;
+use App\Article;
 use Illuminate\Http\Request;
 
-class DischiControllerController extends Controller
+class ArticleController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class DischiControllerController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\DischiController  $dischiController
+     * @param  \App\Article  $article
      * @return \Illuminate\Http\Response
      */
-    public function show(DischiController $dischiController)
+    public function show(Article $article)
     {
         //
     }
@@ -52,10 +52,10 @@ class DischiControllerController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\DischiController  $dischiController
+     * @param  \App\Article  $article
      * @return \Illuminate\Http\Response
      */
-    public function edit(DischiController $dischiController)
+    public function edit(Article $article)
     {
         //
     }
@@ -64,10 +64,10 @@ class DischiControllerController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\DischiController  $dischiController
+     * @param  \App\Article  $article
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, DischiController $dischiController)
+    public function update(Request $request, Article $article)
     {
         //
     }
@@ -75,10 +75,10 @@ class DischiControllerController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\DischiController  $dischiController
+     * @param  \App\Article  $article
      * @return \Illuminate\Http\Response
      */
-    public function destroy(DischiController $dischiController)
+    public function destroy(Article $article)
     {
         //
     }

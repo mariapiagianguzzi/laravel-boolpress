@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateDischiControllersTable extends Migration
+class CreateArticlesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,10 @@ class CreateDischiControllersTable extends Migration
      */
     public function up()
     {
-        Schema::create('dischi_controllers', function (Blueprint $table) {
+        Schema::create('articles', function (Blueprint $table) {
             $table->id();
+            $table->string('title', 50);
+            $table->text('body');
             $table->timestamps();
         });
     }
@@ -26,6 +28,6 @@ class CreateDischiControllersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('dischi_controllers');
+        Schema::dropIfExists('articles');
     }
 }
