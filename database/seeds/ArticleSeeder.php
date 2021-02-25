@@ -17,8 +17,8 @@ class ArticleSeeder extends Seeder
             $newArticle->title = $faker->word();
             $newArticle->body = $faker->words(10, true);
 
-            $newArticle->category_id = $faker-> numberBetween($min = 1, $max = 20);
-            $newArticle->category_id = $faker-> numberBetween($min = 1, $max = 20);
+            /* $newArticle->category_id = $faker-> numberBetween($min = 1, $max = 20);
+            $newArticle->category_id = $faker-> numberBetween($min = 1, $max = 20); */
 
 
            /*  $newArticle->category = $faker->word();

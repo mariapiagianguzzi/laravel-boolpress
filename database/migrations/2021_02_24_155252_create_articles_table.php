@@ -19,10 +19,10 @@ class CreateArticlesTable extends Migration
             $table->text('body'); 
 
             //METTO LE FOREIGN KEY
-            $table->foreignId('category_id')
+            /* $table->foreignId('category_id')
             ->constrained();
             $table->foreignId('tag_id')
-            ->constrained();
+            ->constrained(); */
 
 
 
