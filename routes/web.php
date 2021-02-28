@@ -17,10 +17,8 @@ Route::get('about', 'PageController@about')->name('about');
 Route::get('contacts', 'PageController@admin')->name('contact');
 Route::get('article_api', 'PageController@posts_api')->name('article_api');
 
+Route::resource('articles','ArticleController');
 
 
 
 
-Route::get('/', function () {
-    return view('welcome');
-});

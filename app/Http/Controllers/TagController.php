@@ -14,7 +14,8 @@ class TagController extends Controller
      */
     public function index()
     {
-        //
+        $articles = Article::latest()->get();
+        return view('articles.index', compact('articles'));
     }
 
     /**
@@ -24,7 +25,7 @@ class TagController extends Controller
      */
     public function create()
     {
-        //
+        return view('articles.create');
     }
 
     /**
@@ -35,7 +36,11 @@ class TagController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $article = new Article;
+        $article->title = request('title');
+        $article->body = request('body');
+        $article->save();
+        return redirect()->route('articles.index');
     }
 
     /**
@@ -46,7 +51,7 @@ class TagController extends Controller
      */
     public function show(Tag $tag)
     {
-        //
+        return view ('articles.show', compact('article'));
     }
 
     /**
@@ -57,7 +62,7 @@ class TagController extends Controller
      */
     public function edit(Tag $tag)
     {
-        //
+        return view ('articles.edit', compact('article'));
     }
 
     /**
@@ -69,7 +74,8 @@ class TagController extends Controller
      */
     public function update(Request $request, Tag $tag)
     {
-        //
+        $article-> update($request->all());
+        return redirect()->route('articles.index');
     }
 
     /**
@@ -80,6 +86,7 @@ class TagController extends Controller
      */
     public function destroy(Tag $tag)
     {
-        //
+        $article->delete();
+        return redirect()-> route('articles.index');
     }
 }

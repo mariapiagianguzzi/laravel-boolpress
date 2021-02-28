@@ -14,6 +14,7 @@ class Article extends Model
     {
         return $this->belongsToMany(Tag::class);
     }
+    protected $fillable=['title', 'body', 'author', 'tag_id', 'category_id'];
 
 
 }

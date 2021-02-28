@@ -10,5 +10,6 @@ class Tag extends Model
     {
         return $this->belongsToMany(Article::class);
     }
+    /* protected $fillable=['title', 'body', 'author', 'tag_id', 'category_id']; */
 
 }
