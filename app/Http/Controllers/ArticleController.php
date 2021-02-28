@@ -45,6 +45,7 @@ class ArticleController extends Controller
         $article->body = request('body');
         $article->save();
         return redirect()->route('articles.index');
+        
     }
 
     /**
